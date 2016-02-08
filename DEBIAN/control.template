@@ -1,0 +1,11 @@
+Package: cstbox-ext-zwave
+Version: %(version)s
+Section: embedded
+Priority: optional
+Architecture: all
+Depends: cstbox-core, cstbox-zway-server 
+Maintainer: Eric Pascual <eric.pascual@cstb.fr>
+Description: CSTBox Z-Wave devices support
+    This package adds the support for Z-Way interfaced devices
+    to an existing CSTBox framework.
+    It depends on the Z-Way stack and REST server API

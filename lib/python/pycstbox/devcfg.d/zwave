@@ -1,0 +1,7 @@
+{
+    "protocol" : "zwave",
+    "description" : {
+        "*" : "Réseau ZWave",
+        "en" : "ZWave devices network"
+    }
+}

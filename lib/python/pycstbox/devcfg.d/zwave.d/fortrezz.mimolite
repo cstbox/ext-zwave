@@ -1,0 +1,77 @@
+{
+    "productname" : "MIMOLITE",
+    "__descr__" : {
+        "*" : "Fortrezz multi E/S",
+        "fr" : "Fortrezz multi IO"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            }
+        },
+        "outputs" : {
+            "__seq__" : [ "analog",
+                          "binary",
+                          "counter"
+                        ],
+            "analog" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Analogue",
+                    "*" : "Analog"
+                },
+                "__vartype__" : "analog",
+                "__varunits__" : "",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 3.0
+                }
+            },
+            "counter" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Compteur",
+                    "*" : "Counter"
+                },
+                "__vartype__" : "counter",
+                "__varunits__" : "",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "binary" : {
+                "__seq__" : ["enabled"],
+                "__descr__" :  {
+                    "fr" : "binaire",
+                    "*" : "binary"
+                },
+                "__vartype__" : "binary"
+            }
+        }
+    }
+}

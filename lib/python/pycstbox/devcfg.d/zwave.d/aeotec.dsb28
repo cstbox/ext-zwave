@@ -1,0 +1,248 @@
+{
+    "productname" : "DSB28",
+    "__descr__" : {
+        "*" : "Aeotec DSB28",
+        "fr" : "Aeotec DSB28"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            }
+        },
+        "outputs" : {
+            "__seq__" : [ "energy1",
+                          "power1",
+                          "voltage1",
+                          "current1",
+                          "energy2",
+                          "power2",
+                          "voltage2",
+                          "current2",
+                          "energy3",
+                          "power3",
+                          "voltage3",
+                          "current3"
+                        ],
+            "energy1" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Energie",
+                    "*" : "Energy"
+                },
+                "__vartype__" : "energy",
+                "__varunits__" : "kWh",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "power1" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Puissance",
+                    "*" : "Power"
+                },
+                "__vartype__" : "power",
+                "__varunits__" : "W",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "voltage1" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Voltage",
+                    "*" : "Voltage"
+                },
+                "__vartype__" : "voltage",
+                "__varunits__" : "V",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "current1" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Courant",
+                    "*" : "Current"
+                },
+                "__vartype__" : "current",
+                "__varunits__" : "A",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "energy2" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Energie",
+                    "*" : "Energy"
+                },
+                "__vartype__" : "energy",
+                "__varunits__" : "kWh",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "power2" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Puissance",
+                    "*" : "Power"
+                },
+                "__vartype__" : "power",
+                "__varunits__" : "W",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "voltage2" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Voltage",
+                    "*" : "Voltage"
+                },
+                "__vartype__" : "voltage",
+                "__varunits__" : "V",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "current2" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Courant",
+                    "*" : "Current"
+                },
+                "__vartype__" : "current",
+                "__varunits__" : "A",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "energy3" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Energie",
+                    "*" : "Energy"
+                },
+                "__vartype__" : "energy",
+                "__varunits__" : "kWh",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "power3" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Puissance",
+                    "*" : "Power"
+                },
+                "__vartype__" : "power",
+                "__varunits__" : "W",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "voltage3" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Voltage",
+                    "*" : "Voltage"
+                },
+                "__vartype__" : "voltage",
+                "__varunits__" : "V",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "current3" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Courant",
+                    "*" : "Current"
+                },
+                "__vartype__" : "current",
+                "__varunits__" : "A",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            }
+        }
+    }
+}

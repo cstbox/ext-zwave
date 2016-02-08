@@ -1,0 +1,53 @@
+{
+    "productname" : "DOOR_SENSOR",
+    "__descr__" : {
+        "*" : "Fibaro opening sensor",
+        "fr" : "Capteur d'ouverture Fibaro"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            },
+            "__vartype__" : "opening detection"
+        },
+         "outputs" : {
+            "__seq__" : [ "opened",
+                          "alarm"
+                        ],
+            "opened" : {
+                "__seq__" : ["enabled"],
+                "__descr__" :  {
+                    "fr" : "Overture",
+                    "*" : "Opening"
+                },
+                "__vartype__" : "opening detection",
+                "__varunits__" : ""
+                },
+            "alarm" : {
+                "__seq__" : ["enabled"],
+                "__descr__" :  {
+                    "fr" : "Alarme",
+                    "*" : "Alarm"
+                },
+                "__vartype__" : "alarm",
+                "__varunits__" : ""
+                }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "productname" : "MOTION_SENSOR",
+    "__descr__" : {
+        "*" : "Fibaro motion sensor",
+        "fr" : "Détecteur de mouvement Fibaro"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            }
+        },
+        "outputs" : {
+            "__seq__" : [ "temperature",
+                          "luminiscence",
+                          "alarm",
+                          "motion"
+                        ],
+            "temperature" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Température",
+                    "*" : "Temparature"
+                },
+                "__vartype__" : "temperature",
+                "__varunits__" : "degC",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "luminiscence" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Luminosité",
+                    "*" : "Luminiscence"
+                },
+                "__vartype__" : "luminiscence",
+                "__varunits__" : "lux",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "alarm" : {
+                "__seq__" : ["enabled"],
+                "__descr__" :  {
+                    "fr" : "Alarme",
+                    "*" : "Alarm"
+                },
+                "__vartype__" : "alarm detection"
+            },
+            "motion" : {
+                "__seq__" : ["enabled"],
+                "__descr__" :  {
+                    "fr" : "Mouvement",
+                    "*" : "Motion"
+                },
+                "__vartype__" : "motion detection"
+            }
+        }
+    }
+}

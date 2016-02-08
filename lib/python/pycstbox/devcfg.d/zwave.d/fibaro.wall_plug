@@ -1,0 +1,85 @@
+{
+    "productname" : "WALL_PLUG",
+    "__descr__" : {
+        "*" : "Fibaro wall plug",
+        "fr" : "Prise intelligente Fibaro"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            }
+        },
+        "outputs" : {
+            "__seq__" : [ "energy",
+                          "power"
+                        ],
+            "energy" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Energie",
+                    "*" : "Energy"
+                },
+                "__vartype__" : "energy",
+                "__varunits__" : "kWh",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "avgpower" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Puissance moyenne",
+                    "*" : " Average power"
+                },
+                "__vartype__" : "power",
+                "__varunits__" : "W",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "power" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Puissance",
+                    "*" : "Power"
+                },
+                "__vartype__" : "power",
+                "__varunits__" : "W",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            }
+        }
+    }
+}

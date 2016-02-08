@@ -1,0 +1,68 @@
+{
+    "productname" : "ST814",
+    "__descr__" : {
+        "*" : "Everspring Temperature moisture sensor",
+        "fr" : "Capteur de température/humidité Everspring"
+    },
+    "supports" : [],
+    "pdefs" : {
+        "root" : {
+            "__seq__" : ["address", "location", "enabled", "polling", "events_ttl"],
+            "polling" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Période lecture",
+                    "*" : "Polling period"
+                },
+                "defvalue" : "1m"
+            },
+            "events_ttl" : {
+                "type" : "period",
+                "label" : {
+                    "fr" : "Validité des événements",
+                    "*" : "Events time to live"
+                },
+                "defvalue" : "2h"
+            }
+        },
+        "outputs" : {
+            "__seq__" : [ "temperature",
+                          "moisture"
+                        ],
+            "temperature" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Température",
+                    "*" : "Temparature"
+                },
+                "__vartype__" : "temperature",
+                "__varunits__" : "degC",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            },
+            "moisture" : {
+                "__seq__" : ["enabled", "delta_min"],
+                "__descr__" :  {
+                    "fr" : "Humidité",
+                    "*" : "Moisture"
+                },
+                "__vartype__" : "moisture",
+                "__varunits__" : "%",
+                "delta_min" : {
+                    "type" : "float",
+                    "label" : {
+                        "fr" : "Variation minimale",
+                        "*" : "Variation threshold"
+                    },
+                    "defvalue" : 0.1
+                }
+            }
+        }
+    }
+}
