@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with CSTBox.  If not, see <http://www.gnu.org/licenses/>.
 
-""" HAL interface classes for AEOTEC supported products. """
+""" HAL interface classes for TKB supported products. """
 
 import logging
 
@@ -24,23 +24,9 @@ import pycstbox.hal.device as haldev
 import pycstbox.aeotec.dsb28 as dsb28
 from pycstbox.hal import hal_device
 
-_logger = logging.getLogger('aeotec')
+_logger = logging.getLogger('tkb')
 
 DEFAULT_PRECISION = 3
 
 
-@hal_device(device_type="aeotec.dsb28", coordinator_type="zwave")
-class DSB28(haldev.PolledDevice):
-    """ HAL device modeling the AEOTEC DSB28.
-
-    The extension adds the support of polling requests and CSTBox events
-    publishing on D-Bus.
-    """
-
-    def __init__(self, coord, cfg):
-        super(DSB28, self).__init__(coord, cfg)
-        self._hwdev = dsb28.DSB28Instrument(coord.port, cfg.address)
-        
-
-
-
+#TODO TKB plug device

@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with CSTBox.  If not, see <http://www.gnu.org/licenses/>.
 
-""" HAL interface classes for fortrezz supported products. """
+""" HAL interface classes for FORTREZZ supported products. """
 
 import logging
 
@@ -28,9 +28,10 @@ _logger = logging.getLogger('fortrezz')
 
 DEFAULT_PRECISION = 3
 
+
 @hal_device(device_type="fortrezz.mimolite", coordinator_type="zwave")
 class MIMOLITE(haldev.PolledDevice):
-    """ HAL device modeling the fortrezz mimolite.
+    """ HAL device modeling the FORTREZZ MIMOlite.
 
     The extension adds the support of polling requests and CSTBox events
     publishing on D-Bus.

@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with CSTBox.  If not, see <http://www.gnu.org/licenses/>.
 
-""" HAL interface classes for fibaro supported products. """
+""" HAL interface classes for FIBARO supported products. """
 
 import logging
 
@@ -30,9 +30,10 @@ _logger = logging.getLogger('fibaro')
 
 DEFAULT_PRECISION = 3
 
+
 @hal_device(device_type="fibaro.wall_plug", coordinator_type="zwave")
 class WALL_PLUG(haldev.PolledDevice):
-    """ HAL device modeling the fibaro wall plug.
+    """ HAL device modeling the FIBARO wall plug.
 
     The extension adds the support of polling requests and CSTBox events
     publishing on D-Bus.
@@ -41,10 +42,11 @@ class WALL_PLUG(haldev.PolledDevice):
     def __init__(self, coord, cfg):
         super(WALL_PLUG, self).__init__(coord, cfg)
         self._hwdev = wall_plug.WALL_PLUGInstrument(coord.port, cfg.address)
-        
+
+
 @hal_device(device_type="fibaro.motion_sensor", coordinator_type="zwave")
 class MOTION_SENSOR(haldev.PolledDevice):
-    """ HAL device modeling the fibaro motion sensor.
+    """ HAL device modeling the FIBARO motion sensor.
 
     The extension adds the support of polling requests and CSTBox events
     publishing on D-Bus.

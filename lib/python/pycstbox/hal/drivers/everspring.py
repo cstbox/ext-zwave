@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with CSTBox.  If not, see <http://www.gnu.org/licenses/>.
 
-""" HAL interface classes for everspring supported products. """
+""" HAL interface classes for EVERSPRING supported products. """
 
 import logging
 
@@ -29,9 +29,10 @@ _logger = logging.getLogger('everspring')
 
 DEFAULT_PRECISION = 3
 
+
 @hal_device(device_type="everspring.sm103", coordinator_type="zwave")
 class SM103(haldev.PolledDevice):
-    """ HAL device modeling the everspring sm103.
+    """ HAL device modeling the EVERSPRING SM103.
 
     The extension adds the support of polling requests and CSTBox events
     publishing on D-Bus.
@@ -40,7 +41,8 @@ class SM103(haldev.PolledDevice):
     def __init__(self, coord, cfg):
         super(SM103, self).__init__(coord, cfg)
         self._hwdev = sm103.SM103Instrument(coord.port, cfg.address)
-        
+
+
 @hal_device(device_type="everspring.st814", coordinator_type="zwave")
 class ST814(haldev.PolledDevice):
     """ HAL device modeling the everspring st814.

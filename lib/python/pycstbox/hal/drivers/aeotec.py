@@ -16,7 +16,7 @@
 # You should have received a copy of the GNU Lesser General Public
 # License along with CSTBox.  If not, see <http://www.gnu.org/licenses/>.
 
-""" HAL interface classes for aeotec supported products. """
+""" HAL interface classes for AEOTEC supported products. """
 
 import logging
 
@@ -28,9 +28,10 @@ _logger = logging.getLogger('aeotec')
 
 DEFAULT_PRECISION = 3
 
+
 @hal_device(device_type="aeotec.dsb28", coordinator_type="zwave")
 class DSB28(haldev.PolledDevice):
-    """ HAL device modeling the aeotec dsb28.
+    """ HAL device modeling the AEOTEC DSB28.
 
     The extension adds the support of polling requests and CSTBox events
     publishing on D-Bus.
