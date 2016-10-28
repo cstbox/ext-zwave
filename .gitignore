@@ -3,3 +3,6 @@ cstbox-ext-*_all
 RELEASE-VERSION
 /fabfile.py
 /fabfile-settings.py
+/build/
+/dist/
+/lib/python/pycstbox/__init__.py
