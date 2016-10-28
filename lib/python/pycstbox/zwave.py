@@ -29,5 +29,5 @@ class ZWaveRegister(namedtuple('ZWAveRegister', ['inst', 'cmd_cls', 'data'])):
     :var data: data number
     """
     def __new__(cls, inst, cmd_cls, data):
-        """ Overidded __new__ allowing default values for tuple attributes. """
+        """ Overridden __new__ allowing default values for tuple attributes. """
         return cls.__bases__[0].__new__(cls, inst, cmd_cls, data)
